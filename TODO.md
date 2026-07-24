@@ -25,15 +25,17 @@
 
 ## Phase 6 — Verification
 - [x] Import check: verify all modules import without errors
-- [x] Quick-test: `python -m benchmark.cli --models FLUX.1-dev --resolutions 512 --iterations 1` (gated model, error handled correctly)
-- [x] End-to-end test with tiny open SD model — load/infer timing, JSON, table all verified
-- [x] Verify JSON output structure is complete
-- [x] Verify terminal table renders correctly
-- [ ] Test all models at 512 resolution, 1 iteration (requires HF auth for gated models)
-- [ ] Full run: all models, both resolutions, 5 iterations (requires HF auth for gated models)
+- [x] End-to-end test with tiny open SD model
+- [x] Full benchmark run (steps=20, iterations=3, both 512 and 1024)
+- [x] Fix Wan resolution (divisible by 16) and re-run
+- [x] Results merged and saved to `results/benchmark_final.json`
 
-## Notes
-- Most target models (FLUX.1-dev, Qwen-Image, Wan*, HunyuanVideo, LTX-2) are gated and require `HF_TOKEN` authentication.
-- Before running the full benchmark: `hf auth login` or set `HF_TOKEN` env var.
-- Run: `python -m benchmark.cli --models FLUX.1-dev,Qwen-Image --resolutions 512,1024 --iterations 5`
-- Run all: `python -m benchmark.cli --iterations 5`
+## Phase 7 — Deploy
+- [x] Git commit + push to https://github.com/shiqi-svg/diffusers-benchmark
+
+## Usage
+```bash
+hf auth login
+python -m benchmark.cli --iterations 5
+python -m benchmark.cli --models FLUX.1-dev,Qwen-Image --resolutions 512,1024 --iterations 5
+```

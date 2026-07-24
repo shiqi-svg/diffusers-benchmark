@@ -17,9 +17,9 @@ import logging
 import sys
 from pathlib import Path
 
-from benchmark.config import DEFAULT_ITERATIONS, OUTPUT_DIR, RESOLUTIONS, STEPS
+from benchmark.config import DEFAULT_ITERATIONS, OUTPUT_DIR, STEPS
 from benchmark.core import BenchmarkRunner
-from benchmark.models import get_all_models, get_model
+from benchmark.models import get_all_models
 from benchmark.reporter import print_table, save_json
 
 logger = logging.getLogger("benchmark")

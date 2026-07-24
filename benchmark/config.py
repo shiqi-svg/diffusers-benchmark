@@ -1,4 +1,8 @@
-"""Shared constants and configuration for the benchmark framework."""
+"""Shared constants and configuration for the benchmark framework.
+
+All speed-affecting parameters (steps, resolution) are unified across models.
+Quality-only parameters (prompt, guidance_scale) use per-model defaults below.
+"""
 
 from pathlib import Path
 
@@ -14,27 +18,11 @@ DEFAULT_ITERATIONS = 5
 # Output directory for results and generated assets
 OUTPUT_DIR = Path("results")
 
-# Warm-up: True means a warmup infer() run happens before timing, excluded from results
-WARMUP = True
-
-# Default guidance scale (may be overridden per model if it does not affect speed)
-DEFAULT_GUIDANCE_SCALE = 3.5
-
-# Precision mapping per model — all default to bfloat16 on H100
-MODEL_PRECISION = {
-    "FLUX.1-dev": "bfloat16",
-    "Qwen-Image": "bfloat16",
-    "Wan2.1-T2V": "bfloat16",
-    "Wan2.2-T2V": "bfloat16",
-    "HunyuanVideo": "bfloat16",
-    "LTX-2": "bfloat16",
-}
-
 # ---------------------------------------------------------------------------
 # Per-model default generation parameters that do NOT affect speed.
 # These preserve each model's recommended quality settings.
 # ---------------------------------------------------------------------------
-MODEL_DEFAULTS = {
+MODEL_DEFAULTS: dict[str, dict] = {
     "FLUX.1-dev": {
         "guidance_scale": 3.5,
         "prompt": "A cinematic photo of a majestic mountain landscape at golden hour, highly detailed, 8K",

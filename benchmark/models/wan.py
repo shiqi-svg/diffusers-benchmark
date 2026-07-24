@@ -34,7 +34,9 @@ class BaseWanModel(BaseModel):
         self.pipe.to("cuda")
 
     def infer(self) -> None:
-        defaults = MODEL_DEFAULTS.get(self.model_name, MODEL_DEFAULTS["Wan2.1-T2V"])
+        defaults = MODEL_DEFAULTS.get(self.model_name)
+        if defaults is None:
+            defaults = MODEL_DEFAULTS.get("Wan2.1-T2V", {})
         self.pipe(
             prompt=defaults["prompt"],
             height=self.height,

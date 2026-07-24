@@ -52,6 +52,13 @@ def _truncate(s: str, max_len: int = 80) -> str:
     return s
 
 
+def _fmt_time(value: float, failed: bool) -> str:
+    """Format a time value for table display; show '--' for failed runs."""
+    if failed and value == 0.0:
+        return "--"
+    return f"{value:.3f}"
+
+
 def print_table(results: list[BenchmarkResult]) -> None:
     """Render a rich terminal table summarising the benchmark."""
     table = Table(title="Diffusers Inference Benchmark", title_style="bold white")
@@ -73,16 +80,17 @@ def print_table(results: list[BenchmarkResult]) -> None:
 
     for r in sorted(results, key=lambda x: (x.model_name, x.resolution)):
         error_style = " red" if r.error else ""
+        failed = r.error is not None
         table.add_row(
             r.model_name,
             r.model_type,
             r.resolution,
             r.precision,
             str(r.steps),
-            f"{r.weight_load_time_s:.3f}",
-            f"{r.pure_inference_time_s:.3f}",
-            f"{r.total_inference_time_s:.3f}",
-            str(r.gpu_memory_peak_mb),
+            _fmt_time(r.weight_load_time_s, failed),
+            _fmt_time(r.pure_inference_time_s, failed),
+            _fmt_time(r.total_inference_time_s, failed),
+            str(r.gpu_memory_peak_mb) if not failed else "--",
             _truncate(r.error or ""),
             style=error_style,
         )

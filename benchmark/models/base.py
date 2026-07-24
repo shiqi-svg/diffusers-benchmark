@@ -8,7 +8,7 @@ from typing import Any
 
 import torch
 
-from benchmark.config import DEFAULT_GUIDANCE_SCALE, STEPS
+from benchmark.config import STEPS
 
 logger = logging.getLogger(__name__)
 
@@ -25,7 +25,8 @@ class BaseModel(ABC):
     model_type: str = ""  # "text-to-image" | "text-to-video"
     model_id: str = ""  # HuggingFace repo id
     precision_str: str = "bfloat16"  # human-readable, stored in results
-    default_guidance: float = DEFAULT_GUIDANCE_SCALE
+    default_guidance: float = 3.5
+    # Subclasses MUST override this with their own dict:
     default_resolution: dict[str, int] = {"height": 1024, "width": 1024}
 
     def __init__(self, height: int, width: int, steps: int = STEPS, **kwargs: Any) -> None:
@@ -63,15 +64,14 @@ class BaseModel(ABC):
 
     def _dtype(self) -> torch.dtype:
         """Resolve precision string → torch.dtype."""
-        mapping = {
+        mapping: dict[str, torch.dtype] = {
             "bfloat16": torch.bfloat16,
             "float16": torch.float16,
             "float32": torch.float32,
         }
+        if self.precision_str not in mapping:
+            raise ValueError(
+                f"Unknown precision '{self.precision_str}' for {self.model_name}. "
+                f"Valid: {list(mapping.keys())}"
+            )
         return mapping[self.precision_str]
-
-    def _cleanup(self) -> None:
-        """Release the pipeline and free GPU memory."""
-        if self.pipe is not None:
-            del self.pipe
-            self.pipe = None
