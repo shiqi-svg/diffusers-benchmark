@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-07-24T04:28:50.271992+00:00",
+  "total_entries": 1,
+  "results": [
+    {
+      "model_name": "TinyTest",
+      "model_type": "text-to-image",
+      "resolution": "128x128",
+      "precision": "float32",
+      "steps": 5,
+      "guidance_scale": 7.5,
+      "weight_load_time_s": 3.301,
+      "pure_inference_time_s": 0.071,
+      "total_inference_time_s": 3.372,
+      "gpu_memory_peak_mb": 56,
+      "iterations": 2,
+      "iteration_times": [
+        0.072,
+        0.071
+      ],
+      "error": null
+    }
+  ]
+}

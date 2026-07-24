@@ -1,0 +1,23 @@
+{
+  "generated_at": "2026-07-24T05:11:07.632147+00:00",
+  "total_entries": 1,
+  "results": [
+    {
+      "model_name": "FLUX.1-dev",
+      "model_type": "text-to-image",
+      "resolution": "512x512",
+      "precision": "bfloat16",
+      "steps": 20,
+      "guidance_scale": 3.5,
+      "weight_load_time_s": 37.869,
+      "pure_inference_time_s": 1.25,
+      "total_inference_time_s": 39.119,
+      "gpu_memory_peak_mb": 32838,
+      "iterations": 1,
+      "iteration_times": [
+        1.25
+      ],
+      "error": null
+    }
+  ]
+}

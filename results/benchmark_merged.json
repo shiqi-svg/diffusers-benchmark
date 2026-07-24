@@ -1,0 +1,256 @@
+{
+  "generated_at": "2026-07-24",
+  "hardware": "NVIDIA H100 80GB HBM3",
+  "steps": 20,
+  "iterations": 3,
+  "precision": "bfloat16 (all models)",
+  "total_entries": 14,
+  "results": [
+    {
+      "model_name": "FLUX.1-dev",
+      "model_type": "text-to-image",
+      "resolution": "1024x1024",
+      "precision": "bfloat16",
+      "steps": 20,
+      "guidance_scale": 3.5,
+      "weight_load_time_s": 5.171,
+      "pure_inference_time_s": 3.788,
+      "total_inference_time_s": 8.959,
+      "gpu_memory_peak_mb": 34663,
+      "iterations": 3,
+      "iteration_times": [
+        3.787,
+        3.791,
+        3.787
+      ],
+      "error": null
+    },
+    {
+      "model_name": "FLUX.1-dev",
+      "model_type": "text-to-image",
+      "resolution": "512x512",
+      "precision": "bfloat16",
+      "steps": 20,
+      "guidance_scale": 3.5,
+      "weight_load_time_s": 7.408,
+      "pure_inference_time_s": 1.255,
+      "total_inference_time_s": 8.663,
+      "gpu_memory_peak_mb": 32838,
+      "iterations": 3,
+      "iteration_times": [
+        1.255,
+        1.254,
+        1.255
+      ],
+      "error": null
+    },
+    {
+      "model_name": "HunyuanVideo",
+      "model_type": "text-to-video",
+      "resolution": "1024x1632x61",
+      "precision": "bfloat16",
+      "steps": 20,
+      "guidance_scale": 6.0,
+      "weight_load_time_s": 10.716762597090565,
+      "pure_inference_time_s": 0.0,
+      "total_inference_time_s": 0.0,
+      "gpu_memory_peak_mb": 0,
+      "iterations": 3,
+      "iteration_times": [],
+      "error": "warmup: CUDA out of memory. Tried to allocate 63.50 GiB. GPU 0 has a total capacity of 79.18 GiB of which 23.22 GiB is free. Including non-PyTorch memory, this process has 55.95 GiB memory in use. Of the allocated memory 54.80 GiB is allocated by PyTorch, and 390.96 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)"
+    },
+    {
+      "model_name": "HunyuanVideo",
+      "model_type": "text-to-video",
+      "resolution": "512x816x61",
+      "precision": "bfloat16",
+      "steps": 20,
+      "guidance_scale": 6.0,
+      "weight_load_time_s": 33.64,
+      "pure_inference_time_s": 50.496,
+      "total_inference_time_s": 84.137,
+      "gpu_memory_peak_mb": 62758,
+      "iterations": 3,
+      "iteration_times": [
+        50.518,
+        50.483,
+        50.488
+      ],
+      "error": null
+    },
+    {
+      "model_name": "LTX-2",
+      "model_type": "text-to-video",
+      "resolution": "1024x1536x121",
+      "precision": "bfloat16",
+      "steps": 20,
+      "guidance_scale": 3.0,
+      "weight_load_time_s": 19.29093751392793,
+      "pure_inference_time_s": 0.0,
+      "total_inference_time_s": 0.0,
+      "gpu_memory_peak_mb": 0,
+      "iterations": 3,
+      "iteration_times": [],
+      "error": "warmup: CUDA out of memory. Tried to allocate 2.92 GiB. GPU 0 has a total capacity of 79.18 GiB of which 1.93 GiB is free. Including non-PyTorch memory, this process has 77.24 GiB memory in use. Of the allocated memory 73.68 GiB is allocated by PyTorch, and 2.79 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)"
+    },
+    {
+      "model_name": "LTX-2",
+      "model_type": "text-to-video",
+      "resolution": "512x768x121",
+      "precision": "bfloat16",
+      "steps": 20,
+      "guidance_scale": 3.0,
+      "weight_load_time_s": 278.104,
+      "pure_inference_time_s": 21.095,
+      "total_inference_time_s": 299.199,
+      "gpu_memory_peak_mb": 71214,
+      "iterations": 3,
+      "iteration_times": [
+        21.093,
+        21.101,
+        21.091
+      ],
+      "error": null
+    },
+    {
+      "model_name": "Qwen-Image",
+      "model_type": "text-to-image",
+      "resolution": "1024x1024",
+      "precision": "bfloat16",
+      "steps": 20,
+      "guidance_scale": 4.0,
+      "weight_load_time_s": 9.095,
+      "pure_inference_time_s": 3.733,
+      "total_inference_time_s": 12.827,
+      "gpu_memory_peak_mb": 59356,
+      "iterations": 3,
+      "iteration_times": [
+        3.728,
+        3.737,
+        3.734
+      ],
+      "error": null
+    },
+    {
+      "model_name": "Qwen-Image",
+      "model_type": "text-to-image",
+      "resolution": "512x512",
+      "precision": "bfloat16",
+      "steps": 20,
+      "guidance_scale": 4.0,
+      "weight_load_time_s": 60.114,
+      "pure_inference_time_s": 2.007,
+      "total_inference_time_s": 62.121,
+      "gpu_memory_peak_mb": 56180,
+      "iterations": 3,
+      "iteration_times": [
+        1.98,
+        2.031,
+        2.01
+      ],
+      "error": null
+    },
+    {
+      "model_name": "Wan2.1-T2V",
+      "model_type": "text-to-video",
+      "resolution": "1024x1760x9",
+      "precision": "bfloat16",
+      "steps": 20,
+      "guidance_scale": 5.0,
+      "weight_load_time_s": 173.554,
+      "pure_inference_time_s": 79.74,
+      "total_inference_time_s": 253.294,
+      "gpu_memory_peak_mb": 57997,
+      "iterations": 3,
+      "iteration_times": [
+        79.693,
+        79.78,
+        79.748
+      ],
+      "error": null
+    },
+    {
+      "model_name": "Wan2.1-T2V",
+      "model_type": "text-to-video",
+      "resolution": "1024x1768x9",
+      "precision": "bfloat16",
+      "steps": 20,
+      "guidance_scale": 5.0,
+      "weight_load_time_s": 10.461980222957209,
+      "pure_inference_time_s": 0.0,
+      "total_inference_time_s": 0.0,
+      "gpu_memory_peak_mb": 0,
+      "iterations": 3,
+      "iteration_times": [],
+      "error": "warmup: `height` and `width` have to be divisible by 16 but are 1024 and 1768."
+    },
+    {
+      "model_name": "Wan2.1-T2V",
+      "model_type": "text-to-video",
+      "resolution": "512x880x9",
+      "precision": "bfloat16",
+      "steps": 20,
+      "guidance_scale": 5.0,
+      "weight_load_time_s": 182.142,
+      "pure_inference_time_s": 16.237,
+      "total_inference_time_s": 198.379,
+      "gpu_memory_peak_mb": 43401,
+      "iterations": 3,
+      "iteration_times": [
+        16.228,
+        16.242,
+        16.239
+      ],
+      "error": null
+    },
+    {
+      "model_name": "Wan2.2-T2V",
+      "model_type": "text-to-video",
+      "resolution": "1024x1760x9",
+      "precision": "bfloat16",
+      "steps": 20,
+      "guidance_scale": 5.0,
+      "weight_load_time_s": 173.77336499397643,
+      "pure_inference_time_s": 0.0,
+      "total_inference_time_s": 0.0,
+      "gpu_memory_peak_mb": 0,
+      "iterations": 3,
+      "iteration_times": [],
+      "error": "warmup: CUDA out of memory. Tried to allocate 5.16 GiB. GPU 0 has a total capacity of 79.18 GiB of which 2.82 GiB is free. Including non-PyTorch memory, this process has 76.35 GiB memory in use. Of the allocated memory 72.66 GiB is allocated by PyTorch, and 2.93 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)"
+    },
+    {
+      "model_name": "Wan2.2-T2V",
+      "model_type": "text-to-video",
+      "resolution": "1024x1768x9",
+      "precision": "bfloat16",
+      "steps": 20,
+      "guidance_scale": 5.0,
+      "weight_load_time_s": 16.783976815990172,
+      "pure_inference_time_s": 0.0,
+      "total_inference_time_s": 0.0,
+      "gpu_memory_peak_mb": 0,
+      "iterations": 3,
+      "iteration_times": [],
+      "error": "warmup: `height` and `width` have to be divisible by 16 but are 1024 and 1768."
+    },
+    {
+      "model_name": "Wan2.2-T2V",
+      "model_type": "text-to-video",
+      "resolution": "512x880x9",
+      "precision": "bfloat16",
+      "steps": 20,
+      "guidance_scale": 5.0,
+      "weight_load_time_s": 378.224,
+      "pure_inference_time_s": 16.212,
+      "total_inference_time_s": 394.435,
+      "gpu_memory_peak_mb": 70793,
+      "iterations": 3,
+      "iteration_times": [
+        16.198,
+        16.214,
+        16.223
+      ],
+      "error": null
+    }
+  ]
+}

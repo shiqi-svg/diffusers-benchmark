@@ -1,0 +1,117 @@
+{
+  "title": "Diffusers Inference Benchmark Results",
+  "hardware": "NVIDIA H100 80GB HBM3 (single GPU)",
+  "settings": {
+    "steps": 20,
+    "iterations": 3,
+    "precision": "bfloat16",
+    "warmup": "1 run excluded from timing",
+    "date": "2026-07-24"
+  },
+  "summary_table": [
+    {
+      "model": "FLUX.1-dev",
+      "res": "512x512",
+      "load": 7.408,
+      "infer": 1.255,
+      "total": 8.663,
+      "vram": 32838
+    },
+    {
+      "model": "FLUX.1-dev",
+      "res": "1024x1024",
+      "load": 5.171,
+      "infer": 3.788,
+      "total": 8.959,
+      "vram": 34663
+    },
+    {
+      "model": "Qwen-Image",
+      "res": "512x512",
+      "load": 60.114,
+      "infer": 2.007,
+      "total": 62.121,
+      "vram": 56180
+    },
+    {
+      "model": "Qwen-Image",
+      "res": "1024x1024",
+      "load": 9.095,
+      "infer": 3.733,
+      "total": 12.827,
+      "vram": 59356
+    },
+    {
+      "model": "Wan2.1-T2V",
+      "res": "512x880x9",
+      "load": 182.142,
+      "infer": 16.237,
+      "total": 198.379,
+      "vram": 43401
+    },
+    {
+      "model": "Wan2.1-T2V",
+      "res": "1024x1760x9",
+      "load": 173.554,
+      "infer": 79.74,
+      "total": 253.294,
+      "vram": 57997
+    },
+    {
+      "model": "Wan2.2-T2V",
+      "res": "512x880x9",
+      "load": 378.224,
+      "infer": 16.212,
+      "total": 394.435,
+      "vram": 70793
+    },
+    {
+      "model": "Wan2.2-T2V",
+      "res": "1024x1760x9",
+      "load": 173.773,
+      "infer": null,
+      "total": null,
+      "vram": null,
+      "error": "OOM"
+    },
+    {
+      "model": "HunyuanVideo",
+      "res": "512x816x61",
+      "load": 33.64,
+      "infer": 50.496,
+      "total": 84.137,
+      "vram": 62758
+    },
+    {
+      "model": "HunyuanVideo",
+      "res": "1024x1632x61",
+      "load": 10.717,
+      "infer": null,
+      "total": null,
+      "vram": null,
+      "error": "OOM"
+    },
+    {
+      "model": "LTX-2",
+      "res": "512x768x121",
+      "load": 278.104,
+      "infer": 21.095,
+      "total": 299.199,
+      "vram": 71214
+    },
+    {
+      "model": "LTX-2",
+      "res": "1024x1536x121",
+      "load": 19.291,
+      "infer": null,
+      "total": null,
+      "vram": null,
+      "error": "OOM"
+    }
+  ],
+  "notes": {
+    "OOM_1024": "Wan2.2-T2V (14B), HunyuanVideo, and LTX-2 exceed 80GB VRAM at 1024 resolution with default frame counts.",
+    "wan_resolution": "Resolution adjusted to be divisible by 16 for Wan VAE compatibility.",
+    "load_time_note": "First resolution run downloads/caches weights; second resolution reuses cache, resulting in lower load times."
+  }
+}

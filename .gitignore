@@ -1,0 +1,23 @@
+# Model weights and cache
+.hf_home/
+*.safetensors
+*.bin
+*.pth
+*.ckpt
+*.msgpack
+*.h5
+*.onnx
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+.venv-backups/
+
+# Results (large generated files)
+results/*.mp4
+results/*.png
+results/*.jpg
+
+# System
+.DS_Store

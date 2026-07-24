@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir -p /workspace/benchmark/models /workspace/results)",
+      "Bash(touch /workspace/benchmark/__init__.py /workspace/benchmark/models/__init__.py)"
+    ]
+  }
+}
