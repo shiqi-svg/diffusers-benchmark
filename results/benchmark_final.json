@@ -1,117 +1,132 @@
 {
-  "title": "Diffusers Inference Benchmark Results",
-  "hardware": "NVIDIA H100 80GB HBM3 (single GPU)",
+  "title": "Diffusers Inference Benchmark — Fair Comparison (H100 80GB, single GPU)",
   "settings": {
     "steps": 20,
     "iterations": 3,
     "precision": "bfloat16",
     "warmup": "1 run excluded from timing",
+    "preload": "Each model pre-loaded once (not timed) to cache HF weights before timed runs",
     "date": "2026-07-24"
   },
-  "summary_table": [
+  "results": [
     {
       "model": "FLUX.1-dev",
-      "res": "512x512",
-      "load": 7.408,
-      "infer": 1.255,
-      "total": 8.663,
-      "vram": 32838
+      "type": "text-to-image",
+      "resolution": "512x512",
+      "weight_load_s": 5.623,
+      "pure_inference_s": 1.248,
+      "total_s": 6.871,
+      "vram_mb": 32838
     },
     {
       "model": "FLUX.1-dev",
-      "res": "1024x1024",
-      "load": 5.171,
-      "infer": 3.788,
-      "total": 8.959,
-      "vram": 34663
+      "type": "text-to-image",
+      "resolution": "1024x1024",
+      "weight_load_s": 5.661,
+      "pure_inference_s": 3.783,
+      "total_s": 9.444,
+      "vram_mb": 34663
     },
     {
       "model": "Qwen-Image",
-      "res": "512x512",
-      "load": 60.114,
-      "infer": 2.007,
-      "total": 62.121,
-      "vram": 56180
+      "type": "text-to-image",
+      "resolution": "512x512",
+      "weight_load_s": 9.381,
+      "pure_inference_s": 1.917,
+      "total_s": 11.298,
+      "vram_mb": 56184
     },
     {
       "model": "Qwen-Image",
-      "res": "1024x1024",
-      "load": 9.095,
-      "infer": 3.733,
-      "total": 12.827,
-      "vram": 59356
+      "type": "text-to-image",
+      "resolution": "1024x1024",
+      "weight_load_s": 9.396,
+      "pure_inference_s": 3.719,
+      "total_s": 13.115,
+      "vram_mb": 59361
     },
     {
       "model": "Wan2.1-T2V",
-      "res": "512x880x9",
-      "load": 182.142,
-      "infer": 16.237,
-      "total": 198.379,
-      "vram": 43401
+      "type": "text-to-video",
+      "resolution": "512x880x9",
+      "weight_load_s": 11.107,
+      "pure_inference_s": 16.195,
+      "total_s": 27.303,
+      "vram_mb": 43408
     },
     {
       "model": "Wan2.1-T2V",
-      "res": "1024x1760x9",
-      "load": 173.554,
-      "infer": 79.74,
-      "total": 253.294,
-      "vram": 57997
+      "type": "text-to-video",
+      "resolution": "1024x1760x9",
+      "weight_load_s": 11.158,
+      "pure_inference_s": 79.686,
+      "total_s": 90.844,
+      "vram_mb": 58017
     },
     {
       "model": "Wan2.2-T2V",
-      "res": "512x880x9",
-      "load": 378.224,
-      "infer": 16.212,
-      "total": 394.435,
-      "vram": 70793
+      "type": "text-to-video",
+      "resolution": "512x880x9",
+      "weight_load_s": 33.840,
+      "pure_inference_s": 16.214,
+      "total_s": 50.054,
+      "vram_mb": 70798
     },
     {
       "model": "Wan2.2-T2V",
-      "res": "1024x1760x9",
-      "load": 173.773,
-      "infer": null,
-      "total": null,
-      "vram": null,
-      "error": "OOM"
+      "type": "text-to-video",
+      "resolution": "1024x1760x9",
+      "weight_load_s": 16.655,
+      "pure_inference_s": 0,
+      "total_s": 0,
+      "vram_mb": 0,
+      "error": "OOM at warmup (14B model exceeds 80GB at 1024)"
     },
     {
       "model": "HunyuanVideo",
-      "res": "512x816x61",
-      "load": 33.64,
-      "infer": 50.496,
-      "total": 84.137,
-      "vram": 62758
+      "type": "text-to-video",
+      "resolution": "512x816x61",
+      "weight_load_s": 9.369,
+      "pure_inference_s": 50.520,
+      "total_s": 59.889,
+      "vram_mb": 62763
     },
     {
       "model": "HunyuanVideo",
-      "res": "1024x1632x61",
-      "load": 10.717,
-      "infer": null,
-      "total": null,
-      "vram": null,
-      "error": "OOM"
+      "type": "text-to-video",
+      "resolution": "1024x1632x61",
+      "weight_load_s": 8.560,
+      "pure_inference_s": 0,
+      "total_s": 0,
+      "vram_mb": 0,
+      "error": "OOM at warmup (61 frames at 1024 exceeds 80GB)"
     },
     {
       "model": "LTX-2",
-      "res": "512x768x121",
-      "load": 278.104,
-      "infer": 21.095,
-      "total": 299.199,
-      "vram": 71214
+      "type": "text-to-video",
+      "resolution": "512x768x121",
+      "weight_load_s": 17.964,
+      "pure_inference_s": 21.168,
+      "total_s": 39.132,
+      "vram_mb": 71219
     },
     {
       "model": "LTX-2",
-      "res": "1024x1536x121",
-      "load": 19.291,
-      "infer": null,
-      "total": null,
-      "vram": null,
-      "error": "OOM"
+      "type": "text-to-video",
+      "resolution": "1024x1536x121",
+      "weight_load_s": 15.236,
+      "pure_inference_s": 0,
+      "total_s": 0,
+      "vram_mb": 0,
+      "error": "OOM at warmup (121 frames at 1024 exceeds 80GB)"
     }
   ],
   "notes": {
-    "OOM_1024": "Wan2.2-T2V (14B), HunyuanVideo, and LTX-2 exceed 80GB VRAM at 1024 resolution with default frame counts.",
-    "wan_resolution": "Resolution adjusted to be divisible by 16 for Wan VAE compatibility.",
-    "load_time_note": "First resolution run downloads/caches weights; second resolution reuses cache, resulting in lower load times."
+    "oom_1024": "Wan2.2-T2V (14B), HunyuanVideo, and LTX-2 exceed 80GB at 1024 resolution with default frame counts.",
+    "fastest_inference_512": "FLUX.1-dev — 1.25s",
+    "fastest_inference_1024": "FLUX.1-dev — 3.78s",
+    "fastest_load": "FLUX.1-dev — 5.6s",
+    "largest_vram": "LTX-2 — 71.2GB at 512 (121 frames)",
+    "preload": "All models pre-loaded once to cache HF weights. Load times are pure GPU load, no download overhead."
   }
 }

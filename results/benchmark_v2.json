@@ -1,0 +1,222 @@
+{
+  "generated_at": "2026-07-24T09:10:27.668740+00:00",
+  "total_entries": 12,
+  "results": [
+    {
+      "model_name": "FLUX.1-dev",
+      "model_type": "text-to-image",
+      "resolution": "512x512",
+      "precision": "bfloat16",
+      "steps": 20,
+      "guidance_scale": 3.5,
+      "weight_load_time_s": 5.623,
+      "pure_inference_time_s": 1.248,
+      "total_inference_time_s": 6.871,
+      "gpu_memory_peak_mb": 32838,
+      "iterations": 3,
+      "iteration_times": [
+        1.247,
+        1.247,
+        1.249
+      ],
+      "error": null
+    },
+    {
+      "model_name": "FLUX.1-dev",
+      "model_type": "text-to-image",
+      "resolution": "1024x1024",
+      "precision": "bfloat16",
+      "steps": 20,
+      "guidance_scale": 3.5,
+      "weight_load_time_s": 5.661,
+      "pure_inference_time_s": 3.783,
+      "total_inference_time_s": 9.444,
+      "gpu_memory_peak_mb": 34663,
+      "iterations": 3,
+      "iteration_times": [
+        3.782,
+        3.781,
+        3.787
+      ],
+      "error": null
+    },
+    {
+      "model_name": "Qwen-Image",
+      "model_type": "text-to-image",
+      "resolution": "512x512",
+      "precision": "bfloat16",
+      "steps": 20,
+      "guidance_scale": 4.0,
+      "weight_load_time_s": 9.381,
+      "pure_inference_time_s": 1.917,
+      "total_inference_time_s": 11.298,
+      "gpu_memory_peak_mb": 56184,
+      "iterations": 3,
+      "iteration_times": [
+        1.918,
+        1.916,
+        1.917
+      ],
+      "error": null
+    },
+    {
+      "model_name": "Qwen-Image",
+      "model_type": "text-to-image",
+      "resolution": "1024x1024",
+      "precision": "bfloat16",
+      "steps": 20,
+      "guidance_scale": 4.0,
+      "weight_load_time_s": 9.396,
+      "pure_inference_time_s": 3.719,
+      "total_inference_time_s": 13.115,
+      "gpu_memory_peak_mb": 59361,
+      "iterations": 3,
+      "iteration_times": [
+        3.716,
+        3.723,
+        3.719
+      ],
+      "error": null
+    },
+    {
+      "model_name": "Wan2.1-T2V",
+      "model_type": "text-to-video",
+      "resolution": "512x880x9",
+      "precision": "bfloat16",
+      "steps": 20,
+      "guidance_scale": 5.0,
+      "weight_load_time_s": 11.107,
+      "pure_inference_time_s": 16.195,
+      "total_inference_time_s": 27.303,
+      "gpu_memory_peak_mb": 43408,
+      "iterations": 3,
+      "iteration_times": [
+        16.196,
+        16.194,
+        16.196
+      ],
+      "error": null
+    },
+    {
+      "model_name": "Wan2.1-T2V",
+      "model_type": "text-to-video",
+      "resolution": "1024x1760x9",
+      "precision": "bfloat16",
+      "steps": 20,
+      "guidance_scale": 5.0,
+      "weight_load_time_s": 11.158,
+      "pure_inference_time_s": 79.686,
+      "total_inference_time_s": 90.844,
+      "gpu_memory_peak_mb": 58017,
+      "iterations": 3,
+      "iteration_times": [
+        79.689,
+        79.675,
+        79.695
+      ],
+      "error": null
+    },
+    {
+      "model_name": "Wan2.2-T2V",
+      "model_type": "text-to-video",
+      "resolution": "512x880x9",
+      "precision": "bfloat16",
+      "steps": 20,
+      "guidance_scale": 5.0,
+      "weight_load_time_s": 33.84,
+      "pure_inference_time_s": 16.214,
+      "total_inference_time_s": 50.054,
+      "gpu_memory_peak_mb": 70798,
+      "iterations": 3,
+      "iteration_times": [
+        16.184,
+        16.231,
+        16.227
+      ],
+      "error": null
+    },
+    {
+      "model_name": "Wan2.2-T2V",
+      "model_type": "text-to-video",
+      "resolution": "1024x1760x9",
+      "precision": "bfloat16",
+      "steps": 20,
+      "guidance_scale": 5.0,
+      "weight_load_time_s": 16.655,
+      "pure_inference_time_s": 0.0,
+      "total_inference_time_s": 16.655,
+      "gpu_memory_peak_mb": 0,
+      "iterations": 3,
+      "iteration_times": [],
+      "error": "warmup: CUDA out of memory. Tried to allocate 5.16 GiB. GPU 0 has a total capacity of 79.18 GiB of which 2.80 GiB is free. Including non-PyTorch memory, this process has 76.37 GiB memory in use. Of the allocated memory 72.68 GiB is allocated by PyTorch, and 2.93 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)"
+    },
+    {
+      "model_name": "HunyuanVideo",
+      "model_type": "text-to-video",
+      "resolution": "512x816x61",
+      "precision": "bfloat16",
+      "steps": 20,
+      "guidance_scale": 6.0,
+      "weight_load_time_s": 9.369,
+      "pure_inference_time_s": 50.52,
+      "total_inference_time_s": 59.889,
+      "gpu_memory_peak_mb": 62763,
+      "iterations": 3,
+      "iteration_times": [
+        50.494,
+        50.541,
+        50.524
+      ],
+      "error": null
+    },
+    {
+      "model_name": "HunyuanVideo",
+      "model_type": "text-to-video",
+      "resolution": "1024x1632x61",
+      "precision": "bfloat16",
+      "steps": 20,
+      "guidance_scale": 6.0,
+      "weight_load_time_s": 8.56,
+      "pure_inference_time_s": 0.0,
+      "total_inference_time_s": 8.56,
+      "gpu_memory_peak_mb": 0,
+      "iterations": 3,
+      "iteration_times": [],
+      "error": "warmup: CUDA out of memory. Tried to allocate 63.50 GiB. GPU 0 has a total capacity of 79.18 GiB of which 23.22 GiB is free. Including non-PyTorch memory, this process has 55.95 GiB memory in use. Of the allocated memory 54.80 GiB is allocated by PyTorch, and 385.85 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)"
+    },
+    {
+      "model_name": "LTX-2",
+      "model_type": "text-to-video",
+      "resolution": "512x768x121",
+      "precision": "bfloat16",
+      "steps": 20,
+      "guidance_scale": 3.0,
+      "weight_load_time_s": 17.964,
+      "pure_inference_time_s": 21.168,
+      "total_inference_time_s": 39.132,
+      "gpu_memory_peak_mb": 71219,
+      "iterations": 3,
+      "iteration_times": [
+        21.166,
+        21.172,
+        21.165
+      ],
+      "error": null
+    },
+    {
+      "model_name": "LTX-2",
+      "model_type": "text-to-video",
+      "resolution": "1024x1536x121",
+      "precision": "bfloat16",
+      "steps": 20,
+      "guidance_scale": 3.0,
+      "weight_load_time_s": 15.236,
+      "pure_inference_time_s": 0.0,
+      "total_inference_time_s": 15.236,
+      "gpu_memory_peak_mb": 0,
+      "iterations": 3,
+      "iteration_times": [],
+      "error": "warmup: CUDA out of memory. Tried to allocate 2.92 GiB. GPU 0 has a total capacity of 79.18 GiB of which 1.93 GiB is free. Including non-PyTorch memory, this process has 77.24 GiB memory in use. Of the allocated memory 73.68 GiB is allocated by PyTorch, and 2.79 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)"
+    }
+  ]
+}
